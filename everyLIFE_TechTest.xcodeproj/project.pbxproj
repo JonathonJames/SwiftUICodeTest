@@ -24,6 +24,7 @@
 		5EEE305A26DE54F500CDFD02 /* TaskListRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE305926DE54F500CDFD02 /* TaskListRepositoryInterface.swift */; };
 		5EEE305C26DE556700CDFD02 /* TaskListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE305B26DE556700CDFD02 /* TaskListRepository.swift */; };
 		5EEE309B26DE5E1E00CDFD02 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 5EEE309A26DE5E1E00CDFD02 /* GRDB */; };
+		5EEE309E26DE7DD900CDFD02 /* database.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5EEE309D26DE7DD900CDFD02 /* database.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		5EEE305726DE4E5C00CDFD02 /* TaskListAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListAPITests.swift; sourceTree = "<group>"; };
 		5EEE305926DE54F500CDFD02 /* TaskListRepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListRepositoryInterface.swift; sourceTree = "<group>"; };
 		5EEE305B26DE556700CDFD02 /* TaskListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListRepository.swift; sourceTree = "<group>"; };
+		5EEE309D26DE7DD900CDFD02 /* database.sqlite */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = database.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				5EEE304C26DE410300CDFD02 /* Concrete */,
 				5EEE304926DE40BD00CDFD02 /* Interface */,
 				5EEE304426DE2DE900CDFD02 /* Model */,
+				5EEE309C26DE7D5000CDFD02 /* Resources */,
 				5EEE301926DE2D7800CDFD02 /* everyLIFE_TechTestApp.swift */,
 				5EEE301B26DE2D7800CDFD02 /* ContentView.swift */,
 				5EEE301D26DE2D7C00CDFD02 /* Assets.xcassets */,
@@ -200,6 +203,14 @@
 				5EEE305726DE4E5C00CDFD02 /* TaskListAPITests.swift */,
 			);
 			path = "Concrete Tests";
+			sourceTree = "<group>";
+		};
+		5EEE309C26DE7D5000CDFD02 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5EEE309D26DE7DD900CDFD02 /* database.sqlite */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EEE309E26DE7DD900CDFD02 /* database.sqlite in Resources */,
 				5EEE302126DE2D7C00CDFD02 /* Preview Assets.xcassets in Resources */,
 				5EEE301E26DE2D7C00CDFD02 /* Assets.xcassets in Resources */,
 			);

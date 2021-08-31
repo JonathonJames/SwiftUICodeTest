@@ -30,6 +30,8 @@ struct Task: Codable {
     let type: Category
 }
 
+extension Task: Identifiable {}
+
 extension Task: Hashable {
     func hash(into hasher: inout Hasher) {
         hasher.combine(self.id)
@@ -56,12 +58,17 @@ protocol PersistenceLayerInterface {
 final class GRDBDatabase {
     
     /// Connection to the underlying SQLite database.
-    private let dbQueue: DatabaseQueue = {
-        let retval: DatabaseQueue = try! .init(path: "/resources/database.sqlite")
+    private let dbQueue: DatabaseQueue
+
+    
+    init() {
+        let retval: DatabaseQueue = .init()
+        
+        #warning("TODO: Move this to point at an actual sqlite file")
         
         // Define the database schema
         try! retval.write { db in
-            try! db.create(table: "tasks") { t in
+            try! db.create(table: "tasks", ifNotExists: true) { t in
                 t.column("id", .integer).notNull()
                 t.column("name", .text).notNull()
                 t.column("description", .text).notNull()
@@ -70,8 +77,8 @@ final class GRDBDatabase {
             }
         }
         
-        return retval
-    }()
+        self.dbQueue = retval
+    }
 }
 
 extension GRDBDatabase: PersistenceLayerInterface {
