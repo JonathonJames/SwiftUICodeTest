@@ -13,6 +13,8 @@
 		5EEE302126DE2D7C00CDFD02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EEE302026DE2D7C00CDFD02 /* Preview Assets.xcassets */; };
 		5EEE302C26DE2D7C00CDFD02 /* everyLIFE_TechTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE302B26DE2D7C00CDFD02 /* everyLIFE_TechTestTests.swift */; };
 		5EEE303726DE2D7C00CDFD02 /* everyLIFE_TechTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE303626DE2D7C00CDFD02 /* everyLIFE_TechTestUITests.swift */; };
+		5EEE304626DE2E1D00CDFD02 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE304526DE2E1D00CDFD02 /* Task.swift */; };
+		5EEE304826DE2F9100CDFD02 /* TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE304726DE2F9100CDFD02 /* TaskTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		5EEE303226DE2D7C00CDFD02 /* everyLIFE_TechTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = everyLIFE_TechTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EEE303626DE2D7C00CDFD02 /* everyLIFE_TechTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = everyLIFE_TechTestUITests.swift; sourceTree = "<group>"; };
 		5EEE303826DE2D7C00CDFD02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EEE304526DE2E1D00CDFD02 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		5EEE304726DE2F9100CDFD02 /* TaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 		5EEE301826DE2D7800CDFD02 /* everyLIFE_TechTest */ = {
 			isa = PBXGroup;
 			children = (
+				5EEE304426DE2DE900CDFD02 /* Model */,
 				5EEE301926DE2D7800CDFD02 /* everyLIFE_TechTestApp.swift */,
 				5EEE301B26DE2D7800CDFD02 /* ContentView.swift */,
 				5EEE301D26DE2D7C00CDFD02 /* Assets.xcassets */,
@@ -116,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				5EEE302B26DE2D7C00CDFD02 /* everyLIFE_TechTestTests.swift */,
+				5EEE304726DE2F9100CDFD02 /* TaskTests.swift */,
 				5EEE302D26DE2D7C00CDFD02 /* Info.plist */,
 			);
 			path = everyLIFE_TechTestTests;
@@ -128,6 +134,14 @@
 				5EEE303826DE2D7C00CDFD02 /* Info.plist */,
 			);
 			path = everyLIFE_TechTestUITests;
+			sourceTree = "<group>";
+		};
+		5EEE304426DE2DE900CDFD02 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5EEE304526DE2E1D00CDFD02 /* Task.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EEE301C26DE2D7800CDFD02 /* ContentView.swift in Sources */,
+				5EEE304626DE2E1D00CDFD02 /* Task.swift in Sources */,
 				5EEE301A26DE2D7800CDFD02 /* everyLIFE_TechTestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EEE304826DE2F9100CDFD02 /* TaskTests.swift in Sources */,
 				5EEE302C26DE2D7C00CDFD02 /* everyLIFE_TechTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
