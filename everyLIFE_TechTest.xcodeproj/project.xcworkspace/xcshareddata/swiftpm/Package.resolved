@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "GRDB",
+        "repositoryURL": "https://github.com/groue/GRDB.swift",
+        "state": {
+          "branch": null,
+          "revision": "ba41c22304f9dd9e48266bd288bb7bfcdc992361",
+          "version": "5.10.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
