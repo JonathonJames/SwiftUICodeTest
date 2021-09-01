@@ -27,10 +27,14 @@ final class TaskListRepository: TaskListRepositoryInterface {
         self.persistence = persistence
     }
     
-    func retrieveTaskList() -> AnyPublisher<Result<[Task], Error>, Never> {
+    /// Retrieves the latest task list.
+    /// - Parameter filter: A filter for which tasks should be included.
+    /// - Returns: A publisher which will publish the results of the search.
+    func retrieveTaskList(filter: TaskFilter) -> AnyPublisher<Result<[Task], Error>, Never> {
+    
         return self.api.retrieveTaskList()
             .receive(on: DispatchQueue.global(qos: .background))
-            .map { result in
+            .map { result -> Result<[Task], Error> in
                 switch result {
                 case .success(let tasks):
                     do {
@@ -48,6 +52,26 @@ final class TaskListRepository: TaskListRepositoryInterface {
                 }
                 return result
             }
+            .map({ result -> Result<[Task], Error> in
+                // The API doesn't provide a filter in this case. So we need to apply the filter manually, after the fact.
+                guard case .success(let tasks) = result else {
+                    return result
+                }
+                return .success(
+                    tasks.filter { task in
+                        switch task.type {
+                        case .general:
+                            return filter.contains(.general)
+                        case .medication:
+                            return filter.contains(.medication)
+                        case .hydration:
+                            return filter.contains(.hydration)
+                        case .nutrition:
+                            return filter.contains(.nutrition)
+                        }
+                    }
+                )
+            })
             .eraseToAnyPublisher()
     }
 }

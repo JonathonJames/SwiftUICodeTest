@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5EB0D78C26DF7A9500077F55 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EB0D78B26DF7A9500077F55 /* Images.xcassets */; };
+		5EB0D78E26DF83C300077F55 /* TaskFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0D78D26DF83C300077F55 /* TaskFilter.swift */; };
 		5EEE301A26DE2D7800CDFD02 /* everyLIFE_TechTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE301926DE2D7800CDFD02 /* everyLIFE_TechTestApp.swift */; };
 		5EEE301C26DE2D7800CDFD02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE301B26DE2D7800CDFD02 /* ContentView.swift */; };
 		5EEE301E26DE2D7C00CDFD02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EEE301D26DE2D7C00CDFD02 /* Assets.xcassets */; };
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5EB0D78B26DF7A9500077F55 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5EB0D78D26DF83C300077F55 /* TaskFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskFilter.swift; sourceTree = "<group>"; };
 		5EEE301626DE2D7800CDFD02 /* everyLIFE_TechTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = everyLIFE_TechTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EEE301926DE2D7800CDFD02 /* everyLIFE_TechTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = everyLIFE_TechTestApp.swift; sourceTree = "<group>"; };
 		5EEE301B26DE2D7800CDFD02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -164,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				5EEE304526DE2E1D00CDFD02 /* Task.swift */,
+				5EB0D78D26DF83C300077F55 /* TaskFilter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -209,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				5EEE309D26DE7DD900CDFD02 /* database.sqlite */,
+				5EB0D78B26DF7A9500077F55 /* Images.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -323,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EEE309E26DE7DD900CDFD02 /* database.sqlite in Resources */,
+				5EB0D78C26DF7A9500077F55 /* Images.xcassets in Resources */,
 				5EEE302126DE2D7C00CDFD02 /* Preview Assets.xcassets in Resources */,
 				5EEE301E26DE2D7C00CDFD02 /* Assets.xcassets in Resources */,
 			);
@@ -351,6 +358,7 @@
 			files = (
 				5EEE305C26DE556700CDFD02 /* TaskListRepository.swift in Sources */,
 				5EEE304E26DE411400CDFD02 /* URLSessionNetworkService.swift in Sources */,
+				5EB0D78E26DF83C300077F55 /* TaskFilter.swift in Sources */,
 				5EEE305426DE4B8200CDFD02 /* TaskListAPIInterface.swift in Sources */,
 				5EEE305626DE4C3E00CDFD02 /* TaskListAPI.swift in Sources */,
 				5EEE304B26DE40CD00CDFD02 /* NetworkServiceInterface.swift in Sources */,

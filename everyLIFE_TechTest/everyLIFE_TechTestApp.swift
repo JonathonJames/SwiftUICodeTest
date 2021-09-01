@@ -26,19 +26,7 @@ struct everyLIFE_TechTestApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView(
-                state: .loaded(
-                    [
-                        Task(
-                            id: 1,
-                            name: "Test Title",
-                            description: "Test Description",
-                            type: .general
-                        )
-                    ]
-                )
-            )
-            .environment(\.repository, self.repository)
+            ContentView(viewModel: .init(repository: self.repository))
         }
     }
 }
