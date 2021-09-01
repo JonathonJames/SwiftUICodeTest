@@ -34,7 +34,7 @@ final class TaskListRepository: TaskListRepositoryInterface {
     
         return self.api.retrieveTaskList()
             .receive(on: DispatchQueue.global(qos: .background))
-            .map { result -> Result<[Task], Error> in
+            .map { [self] result -> Result<[Task], Error> in
                 switch result {
                 case .success(let tasks):
                     do {

@@ -2,7 +2,7 @@
 //  TaskFilter.swift
 //  everyLIFE_TechTest
 //
-//  Created by Uncreation on 01/09/2021.
+//  Created by Jonathon James on 01/09/2021.
 //
 
 struct TaskFilter: OptionSet {

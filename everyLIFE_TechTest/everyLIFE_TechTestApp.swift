@@ -24,24 +24,18 @@ struct everyLIFE_TechTestApp: App {
         )
     }()
     
+    private let networkMonitor: NetworkConnectionMonitorInterface = {
+        return NetworkConnectionMonitor()
+    }()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: .init(repository: self.repository))
+            TaskListView(
+                viewModel: .init(
+                    repository: self.repository,
+                    networkMonitor: self.networkMonitor
+                )
+            )
         }
     }
-}
-
-extension EnvironmentValues {
-    var repository: TaskListRepositoryInterface? {
-        get {
-            self[TaskListRepositoryEnvironmentKey.self]
-        }
-        set {
-            self[TaskListRepositoryEnvironmentKey.self] = newValue
-        }
-    }
-}
-
-private struct TaskListRepositoryEnvironmentKey: EnvironmentKey {
-    static let defaultValue: TaskListRepositoryInterface? = nil
 }

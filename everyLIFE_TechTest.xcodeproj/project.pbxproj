@@ -9,8 +9,16 @@
 /* Begin PBXBuildFile section */
 		5EB0D78C26DF7A9500077F55 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EB0D78B26DF7A9500077F55 /* Images.xcassets */; };
 		5EB0D78E26DF83C300077F55 /* TaskFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0D78D26DF83C300077F55 /* TaskFilter.swift */; };
+		5EB0D79126DFABB300077F55 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0D79026DFABB300077F55 /* TaskView.swift */; };
+		5EB0D79326DFABD200077F55 /* FilterIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0D79226DFABD200077F55 /* FilterIcon.swift */; };
+		5EB0D79526DFAC0300077F55 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0D79426DFAC0300077F55 /* FilterView.swift */; };
+		5EB0D79826DFAC9300077F55 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0D79726DFAC9300077F55 /* ViewState.swift */; };
+		5EB0D79A26DFB4DD00077F55 /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0D79926DFB4DD00077F55 /* TaskListViewModel.swift */; };
+		5EB0D79C26DFC7B200077F55 /* ToastNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0D79B26DFC7B200077F55 /* ToastNotificationView.swift */; };
+		5EB0D79E26DFD4B300077F55 /* NetworkConnectionMonitorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0D79D26DFD4B300077F55 /* NetworkConnectionMonitorInterface.swift */; };
+		5EB0D7A026DFD4D500077F55 /* NetworkConnectionMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0D79F26DFD4D500077F55 /* NetworkConnectionMonitor.swift */; };
 		5EEE301A26DE2D7800CDFD02 /* everyLIFE_TechTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE301926DE2D7800CDFD02 /* everyLIFE_TechTestApp.swift */; };
-		5EEE301C26DE2D7800CDFD02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE301B26DE2D7800CDFD02 /* ContentView.swift */; };
+		5EEE301C26DE2D7800CDFD02 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE301B26DE2D7800CDFD02 /* TaskListView.swift */; };
 		5EEE301E26DE2D7C00CDFD02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EEE301D26DE2D7C00CDFD02 /* Assets.xcassets */; };
 		5EEE302126DE2D7C00CDFD02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EEE302026DE2D7C00CDFD02 /* Preview Assets.xcassets */; };
 		5EEE302C26DE2D7C00CDFD02 /* everyLIFE_TechTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE302B26DE2D7C00CDFD02 /* everyLIFE_TechTestTests.swift */; };
@@ -26,7 +34,6 @@
 		5EEE305A26DE54F500CDFD02 /* TaskListRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE305926DE54F500CDFD02 /* TaskListRepositoryInterface.swift */; };
 		5EEE305C26DE556700CDFD02 /* TaskListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE305B26DE556700CDFD02 /* TaskListRepository.swift */; };
 		5EEE309B26DE5E1E00CDFD02 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 5EEE309A26DE5E1E00CDFD02 /* GRDB */; };
-		5EEE309E26DE7DD900CDFD02 /* database.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5EEE309D26DE7DD900CDFD02 /* database.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,9 +56,17 @@
 /* Begin PBXFileReference section */
 		5EB0D78B26DF7A9500077F55 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5EB0D78D26DF83C300077F55 /* TaskFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskFilter.swift; sourceTree = "<group>"; };
+		5EB0D79026DFABB300077F55 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
+		5EB0D79226DFABD200077F55 /* FilterIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterIcon.swift; sourceTree = "<group>"; };
+		5EB0D79426DFAC0300077F55 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		5EB0D79726DFAC9300077F55 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		5EB0D79926DFB4DD00077F55 /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
+		5EB0D79B26DFC7B200077F55 /* ToastNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastNotificationView.swift; sourceTree = "<group>"; };
+		5EB0D79D26DFD4B300077F55 /* NetworkConnectionMonitorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnectionMonitorInterface.swift; sourceTree = "<group>"; };
+		5EB0D79F26DFD4D500077F55 /* NetworkConnectionMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnectionMonitor.swift; sourceTree = "<group>"; };
 		5EEE301626DE2D7800CDFD02 /* everyLIFE_TechTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = everyLIFE_TechTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EEE301926DE2D7800CDFD02 /* everyLIFE_TechTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = everyLIFE_TechTestApp.swift; sourceTree = "<group>"; };
-		5EEE301B26DE2D7800CDFD02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5EEE301B26DE2D7800CDFD02 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
 		5EEE301D26DE2D7C00CDFD02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EEE302026DE2D7C00CDFD02 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5EEE302226DE2D7C00CDFD02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,7 +86,6 @@
 		5EEE305726DE4E5C00CDFD02 /* TaskListAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListAPITests.swift; sourceTree = "<group>"; };
 		5EEE305926DE54F500CDFD02 /* TaskListRepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListRepositoryInterface.swift; sourceTree = "<group>"; };
 		5EEE305B26DE556700CDFD02 /* TaskListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListRepository.swift; sourceTree = "<group>"; };
-		5EEE309D26DE7DD900CDFD02 /* database.sqlite */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = database.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +114,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5EB0D78F26DFAB9C00077F55 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5EB0D79626DFAC8700077F55 /* Model */,
+				5EEE301B26DE2D7800CDFD02 /* TaskListView.swift */,
+				5EB0D79226DFABD200077F55 /* FilterIcon.swift */,
+				5EB0D79426DFAC0300077F55 /* FilterView.swift */,
+				5EB0D79026DFABB300077F55 /* TaskView.swift */,
+				5EB0D79B26DFC7B200077F55 /* ToastNotificationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5EB0D79626DFAC8700077F55 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5EB0D79726DFAC9300077F55 /* ViewState.swift */,
+				5EB0D79926DFB4DD00077F55 /* TaskListViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5EEE300D26DE2D7800CDFD02 = {
 			isa = PBXGroup;
 			children = (
@@ -127,8 +163,8 @@
 				5EEE304926DE40BD00CDFD02 /* Interface */,
 				5EEE304426DE2DE900CDFD02 /* Model */,
 				5EEE309C26DE7D5000CDFD02 /* Resources */,
+				5EB0D78F26DFAB9C00077F55 /* View */,
 				5EEE301926DE2D7800CDFD02 /* everyLIFE_TechTestApp.swift */,
-				5EEE301B26DE2D7800CDFD02 /* ContentView.swift */,
 				5EEE301D26DE2D7C00CDFD02 /* Assets.xcassets */,
 				5EEE302226DE2D7C00CDFD02 /* Info.plist */,
 				5EEE301F26DE2D7C00CDFD02 /* Preview Content */,
@@ -177,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				5EEE304A26DE40CD00CDFD02 /* NetworkServiceInterface.swift */,
+				5EB0D79D26DFD4B300077F55 /* NetworkConnectionMonitorInterface.swift */,
 				5EEE305926DE54F500CDFD02 /* TaskListRepositoryInterface.swift */,
 				5EEE305326DE4B8200CDFD02 /* TaskListAPIInterface.swift */,
 			);
@@ -189,6 +226,7 @@
 				5EEE304D26DE411400CDFD02 /* URLSessionNetworkService.swift */,
 				5EEE305526DE4C3E00CDFD02 /* TaskListAPI.swift */,
 				5EEE305B26DE556700CDFD02 /* TaskListRepository.swift */,
+				5EB0D79F26DFD4D500077F55 /* NetworkConnectionMonitor.swift */,
 			);
 			path = Concrete;
 			sourceTree = "<group>";
@@ -213,7 +251,6 @@
 		5EEE309C26DE7D5000CDFD02 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5EEE309D26DE7DD900CDFD02 /* database.sqlite */,
 				5EB0D78B26DF7A9500077F55 /* Images.xcassets */,
 			);
 			path = Resources;
@@ -328,7 +365,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EEE309E26DE7DD900CDFD02 /* database.sqlite in Resources */,
 				5EB0D78C26DF7A9500077F55 /* Images.xcassets in Resources */,
 				5EEE302126DE2D7C00CDFD02 /* Preview Assets.xcassets in Resources */,
 				5EEE301E26DE2D7C00CDFD02 /* Assets.xcassets in Resources */,
@@ -356,16 +392,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EB0D79526DFAC0300077F55 /* FilterView.swift in Sources */,
 				5EEE305C26DE556700CDFD02 /* TaskListRepository.swift in Sources */,
+				5EB0D79A26DFB4DD00077F55 /* TaskListViewModel.swift in Sources */,
+				5EB0D79C26DFC7B200077F55 /* ToastNotificationView.swift in Sources */,
 				5EEE304E26DE411400CDFD02 /* URLSessionNetworkService.swift in Sources */,
 				5EB0D78E26DF83C300077F55 /* TaskFilter.swift in Sources */,
 				5EEE305426DE4B8200CDFD02 /* TaskListAPIInterface.swift in Sources */,
 				5EEE305626DE4C3E00CDFD02 /* TaskListAPI.swift in Sources */,
 				5EEE304B26DE40CD00CDFD02 /* NetworkServiceInterface.swift in Sources */,
+				5EB0D7A026DFD4D500077F55 /* NetworkConnectionMonitor.swift in Sources */,
+				5EB0D79326DFABD200077F55 /* FilterIcon.swift in Sources */,
+				5EB0D79826DFAC9300077F55 /* ViewState.swift in Sources */,
 				5EEE305A26DE54F500CDFD02 /* TaskListRepositoryInterface.swift in Sources */,
-				5EEE301C26DE2D7800CDFD02 /* ContentView.swift in Sources */,
+				5EEE301C26DE2D7800CDFD02 /* TaskListView.swift in Sources */,
 				5EEE304626DE2E1D00CDFD02 /* Task.swift in Sources */,
+				5EB0D79126DFABB300077F55 /* TaskView.swift in Sources */,
 				5EEE301A26DE2D7800CDFD02 /* everyLIFE_TechTestApp.swift in Sources */,
+				5EB0D79E26DFD4B300077F55 /* NetworkConnectionMonitorInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
