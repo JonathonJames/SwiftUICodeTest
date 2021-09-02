@@ -140,19 +140,3 @@ final class TaskListAPITests: XCTestCase {
         self.wait(for: [expectation], timeout: 5.0)
     }
 }
-
-
-extension Task: Equatable {
-    
-    /// Equatability for `Task` type, purely for testing purposes.
-    /// - Parameters:
-    ///   - lhs: The left-hand value being compared.
-    ///   - rhs: The right-hand value being compated.
-    /// - Returns: `true` if the values are equal, `false` otherwise.
-    public static func ==(_ lhs: Task, _ rhs: Task) -> Bool {
-        return lhs.id == rhs.id &&
-            lhs.name == rhs.name &&
-            lhs.description == rhs.description &&
-            lhs.type == rhs.type
-    }
-}

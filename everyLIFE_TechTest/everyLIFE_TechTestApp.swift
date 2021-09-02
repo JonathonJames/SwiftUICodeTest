@@ -36,6 +36,7 @@ struct everyLIFE_TechTestApp: App {
                     networkMonitor: self.networkMonitor
                 )
             )
+            .accessibility(identifier: "TaskListView")
         }
     }
 }

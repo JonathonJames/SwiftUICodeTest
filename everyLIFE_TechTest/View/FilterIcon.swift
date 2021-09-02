@@ -21,6 +21,7 @@ struct FilterIcon: View {
                 .renderingMode(.template)
                 .foregroundColor(.gray)
         }
+        
     }
 }
 

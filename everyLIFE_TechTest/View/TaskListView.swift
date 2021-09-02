@@ -24,14 +24,19 @@ struct TaskListView: View {
                             .onAppear {
                                 self.viewModel.loadTasks(filter: self.viewModel.filter)
                             }
+                            
+                            .accessibilityIdentifier("TaskListView_Empty")
                         FilterView(viewModel: self.viewModel)
+                            .accessibilityIdentifier("FilterView")
                     }
                     .navigationBarTitle("Tasks", displayMode: .inline)
                 case .loading:
                     Group {
                         ProgressView()
                             .progressViewStyle(CircularProgressViewStyle())
+                            .accessibilityIdentifier("LoadingIndicator")
                         FilterView(viewModel: self.viewModel)
+                            .accessibilityIdentifier("FilterView")
                     }
                     .navigationBarTitle("Tasks", displayMode: .inline)
                 case .loaded(let tasks):
@@ -39,18 +44,23 @@ struct TaskListView: View {
                         VStack {
                             List(tasks) { task in
                                 TaskView(task: task)
+                                    .accessibilityIdentifier("TaskView_\(task.type)_\(task.id)")
                             }
                             .listStyle(PlainListStyle())
+                            .accessibilityIdentifier("TaskListView")
                             FilterView(viewModel: self.viewModel)
+                                .accessibilityIdentifier("FilterView")
                         }
                     }
                     .navigationBarTitle("Tasks", displayMode: .inline)
                 case .error(let error):
-                    #warning("TODO: Present the error message.")
+                    #warning("TODO: Add a pull to refresh, rather than the user needing to adjust the filter")
                     Group {
-                        List { }
-                            .listStyle(PlainListStyle())
+                        List {}
+                        Text("Error loading tasks:\n\(error.localizedDescription)")
+                            .accessibilityIdentifier("ErrorText")
                         FilterView(viewModel: self.viewModel)
+                            .accessibilityIdentifier("FilterView")
                     }
                     .navigationBarTitle("Tasks", displayMode: .inline)
                 }
@@ -62,6 +72,7 @@ struct TaskListView: View {
                      (.connected, .disconnected):
                     ToastNotificationView(text: "Connection lost")
                         .animation(.easeOut(duration: 3))
+                        .accessibilityIdentifier("ConnectionLostToast")
                 case (.disconnected, .connected):
                     ToastNotificationView(color: .green, text: "Connection restored")
                         .onAppear {
@@ -69,6 +80,7 @@ struct TaskListView: View {
                             self.viewModel.loadTasks(filter: self.viewModel.filter)
                         }
                         .animation(.easeOut(duration: 3))
+                        .accessibilityIdentifier("ConnectionRestoredToast")
                 default:
                     EmptyView()
                 }

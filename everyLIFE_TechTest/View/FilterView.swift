@@ -18,18 +18,22 @@ struct FilterView: View {
                 .onTapGesture {
                     self.viewModel.toggle(option: .general)
                 }
+                .accessibilityIdentifier("FilterIcon_General")
             FilterIcon(imageName: "medication_icon", isActive: self.viewModel.filter.contains(.medication))
                 .onTapGesture {
                     self.viewModel.toggle(option: .medication)
                 }
+                .accessibilityIdentifier("FilterIcon_Medication")
             FilterIcon(imageName: "hydration_icon", isActive: self.viewModel.filter.contains(.hydration))
                 .onTapGesture {
                     self.viewModel.toggle(option: .hydration)
                 }
+                .accessibilityIdentifier("FilterIcon_Hydration")
             FilterIcon(imageName: "nutrition_icon", isActive: self.viewModel.filter.contains(.nutrition))
                 .onTapGesture {
                     self.viewModel.toggle(option: .nutrition)
                 }
+                .accessibilityIdentifier("FilterIcon_Nutrition")
         }
         .frame(maxHeight: 44, alignment: .center)
     }

@@ -8,6 +8,8 @@
 import XCTest
 
 class everyLIFE_TechTestUITests: XCTestCase {
+    
+    #warning("TODO: These are very unfinished. Need to setup a 'mock' app, rather than the actual app, so that we can have more fine-grained control over what the app does and when, without necessarily needing to hit the API.")
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -29,6 +31,20 @@ class everyLIFE_TechTestUITests: XCTestCase {
 
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let navBar: XCUIElement = app.navigationBars.element
+        XCTAssert(navBar.exists)
+
+        let tasksHeaderText: XCUIElement = app.staticTexts["Tasks"]
+        XCTAssert(tasksHeaderText.exists)
+        
+        let taskListView: XCUIElement = app.otherElements["TaskListView"]
+        XCTAssert(taskListView.exists)
+        
+        
+        #warning("TODO: This fails. Not sure why. Accessibility inspector just picks up the parent 'Group'. Perhaps need to hide that somehow.)
+        let filterView: XCUIElement = app.otherElements["FilterView"]
+        XCTAssert(filterView.exists)
     }
 
     func testLaunchPerformance() throws {
